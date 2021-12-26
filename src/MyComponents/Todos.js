@@ -14,11 +14,7 @@ export const Todos = (props) => {
             {props.todos.length === 0? "No To-Do's to display!!":
             props.todos.map((todo)=>{
                 // now below it will return all the items
-                return(
-                    <>
-                    <Todo_items todo={todo} key={todo.sno} onDelete={props.onDelete} /> <hr/>
-                    </>
-                ) 
+                return(<Todo_items todo={todo} key={todo.sno} onDelete={props.onDelete} />) 
             })}
             
 

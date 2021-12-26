@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './MyComponents/Header';
 import { Todos } from './MyComponents/Todos';
-import Footer from './MyComponents/Footer';
+// import Footer from './MyComponents/Footer';
 import { AddTodo } from './MyComponents/AddTodo';
 import { About } from './MyComponents/About';
 // importing useState and useEffect to update todos (in state hook website)
@@ -26,7 +26,7 @@ function App() {
 
   //the function to delete the todo
   const onDelete = (todo) => {
-    console.log("I am onDelete of todo", todo);
+    // console.log("I am onDelete of todo", todo);
 
     setTodos(todos.filter((e) => {     //here e is just a variable you can set any variqble like a,b,c, etc
       return e !== todo;
@@ -37,11 +37,11 @@ function App() {
 
   // the function to add todo
   const addTodo = (title, desc) => {
-    console.log("I am add todo", title, desc);
+    // console.log("I am add todo", title, desc);
 
     // here the serial nos are updated
     let sno;
-    if (todos.length == 0) {
+    if (todos.length === 0) {
       sno = 0;
     }
     else {
@@ -55,7 +55,7 @@ function App() {
     }
     // here titles and descriptions are updated
     setTodos([...todos, myTodo]);
-    console.log(myTodo);
+    // console.log(myTodo);
 
   }
 
@@ -87,7 +87,7 @@ function App() {
         </Switch>
 
 
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </>
   );
